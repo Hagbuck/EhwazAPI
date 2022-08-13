@@ -1,2 +1,23 @@
-package fr.cyclone.ehwaz;public class Muscle {
+package fr.cyclone.ehwaz.models;
+
+public enum Muscle {
+    CHEST,
+    UPPER_CHEST,
+    LOWER_CHES,
+    LAT,
+    TRAPEZIUS,
+    UPPER_TRAPEZIUS,
+    MIDDLE_TRAPEZIUS,
+    LOWER_TRAPEZIUS,
+    DELTOID,
+    POSTERIOR_DELTOID,
+    LATERAL_DELTOID,
+    ANTERIOR_DELTOID,
+    BICEPS,
+    TRICEPS,
+    GLUTEALS,
+    QUADRICEPS,
+    HAMSTRINGS,
+    ADDUCTORS,
+    CALVES,
 }
