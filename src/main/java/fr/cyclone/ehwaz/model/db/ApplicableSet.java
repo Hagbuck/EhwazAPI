@@ -1,6 +1,10 @@
-package fr.cyclone.ehwaz.models;
+package fr.cyclone.ehwaz.model.db;
 
+import fr.cyclone.ehwaz.model.enumeration.ERepType;
+import fr.cyclone.ehwaz.model.enumeration.EUnit;
 import lombok.*;
+
+import javax.persistence.*;
 
 
 @Getter
@@ -8,7 +12,12 @@ import lombok.*;
 @NoArgsConstructor
 @AllArgsConstructor
 @RequiredArgsConstructor
+@Entity
 public class ApplicableSet {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
     @NonNull
     private Integer reps;
 
@@ -27,6 +36,8 @@ public class ApplicableSet {
     @NonNull
     private Integer secondRest;
 
+    @OneToOne
+    @JoinColumn(name = "commentary_id")
     private Commentary commentary;
 
     private Integer rpe;

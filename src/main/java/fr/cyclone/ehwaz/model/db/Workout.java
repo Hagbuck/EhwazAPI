@@ -1,7 +1,8 @@
-package fr.cyclone.ehwaz.models;
+package fr.cyclone.ehwaz.model.db;
 
 import lombok.*;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 import java.util.Date;
 
@@ -9,7 +10,12 @@ import java.util.Date;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Entity
 public class Workout {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
     @NonNull
     public Date workoutStart;
 
@@ -20,5 +26,5 @@ public class Workout {
     public String name;
 
     @NonNull
-    public ArrayList<ApplicableExercise> exercises;
+    public ArrayList<WorkStep> workSteps;
 }

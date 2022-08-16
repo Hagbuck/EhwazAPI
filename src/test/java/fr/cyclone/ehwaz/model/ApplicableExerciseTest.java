@@ -1,7 +1,13 @@
-package fr.cyclone.ehwaz.models;
+package fr.cyclone.ehwaz.model;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
+import fr.cyclone.ehwaz.model.db.ApplicableExercise;
+import fr.cyclone.ehwaz.model.db.ApplicableSet;
+import fr.cyclone.ehwaz.model.db.Exercise;
+import fr.cyclone.ehwaz.model.enumeration.EMuscle;
+import fr.cyclone.ehwaz.model.enumeration.ERepType;
+import fr.cyclone.ehwaz.model.enumeration.EUnit;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;

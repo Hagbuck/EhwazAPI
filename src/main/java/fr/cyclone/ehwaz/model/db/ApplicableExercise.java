@@ -1,7 +1,8 @@
-package fr.cyclone.ehwaz.models;
+package fr.cyclone.ehwaz.model.db;
 
 import lombok.*;
 
+import javax.persistence.*;
 import java.util.ArrayList;
 
 @Getter
@@ -9,13 +10,22 @@ import java.util.ArrayList;
 @NoArgsConstructor
 @AllArgsConstructor
 @RequiredArgsConstructor
+@Entity
 public class ApplicableExercise {
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Long id;
+
+    @OneToOne
+    @JoinColumn(name = "exercise_id")
     @NonNull
     public Exercise exercise;
 
     @NonNull
     public ArrayList<ApplicableSet> sets;
 
+    @OneToOne
+    @JoinColumn(name = "commentary_id")
     private Commentary commentary;
 
     /** To preload the timer on the front app **/
