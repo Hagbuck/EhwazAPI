@@ -13,14 +13,14 @@ public class WorkoutTest {
     public void buildWorkout() throws Exception {
         ArrayList<ApplicableExercise> exos = new ArrayList<>();
 
-        Exercise dc = new Exercise("DC", "Push up exercise", new ArrayList<>(Arrays.asList(Muscle.CHEST, Muscle.TRICEPS, Muscle.POSTERIOR_DELTOID)));
+        Exercise dc = new Exercise("DC", "Push up exercise", new ArrayList<>(Arrays.asList(EMuscle.CHEST, EMuscle.TRICEPS, EMuscle.POSTERIOR_DELTOID)));
 
-        ArrayList<AEvent> sets1 = new ArrayList<>(Arrays.asList(
-                new ApplicableSet(10, false, 60.0, 0, 8, 2, ""),
-                new ApplicableSet(9, false, 60.0, 0, 10, 0, "Echec musculaire")
+        ArrayList<ApplicableSet> sets1 = new ArrayList<>(Arrays.asList(
+                new ApplicableSet(10, ERepType.REPETITION, 10.0, EUnit.KG, false, 60),
+                new ApplicableSet(10, ERepType.REPETITION, 10.0, EUnit.KG, false, 60)
         ));
 
-        ApplicableExercise ex1 = new ApplicableExercise(dc, sets1, "Very good");
+        ApplicableExercise ex1 = new ApplicableExercise(dc, sets1);
 
         exos.add(ex1);
 

@@ -14,7 +14,7 @@ public class Session {
     public String name;
 
     @NonNull
-    public ArrayList<SessionExercise> exercises;
+    public ArrayList<ApplicableExercise> exercises;
 
     public String description;
 }

@@ -2,14 +2,16 @@ package fr.cyclone.ehwaz.models;
 
 import lombok.*;
 
+import java.util.ArrayList;
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @RequiredArgsConstructor
-public class AEvent {
+public class WorkStep {
     @NonNull
-    protected Integer order;
+    private ArrayList<ApplicableExercise> exercises;
 
-    protected EventType eventType = EventType.NONE;
+    private Commentary commentary;
 }

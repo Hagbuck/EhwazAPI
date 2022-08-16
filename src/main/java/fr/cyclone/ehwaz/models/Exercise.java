@@ -16,5 +16,5 @@ public class Exercise {
     public String description;
 
     @NonNull
-    public ArrayList<Muscle> muscles;
+    public ArrayList<EMuscle> muscles;
 }

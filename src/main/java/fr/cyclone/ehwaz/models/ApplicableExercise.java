@@ -14,10 +14,9 @@ public class ApplicableExercise {
     public Exercise exercise;
 
     @NonNull
-    public ArrayList<AEvent> events;
+    public ArrayList<ApplicableSet> sets;
 
-    @NonNull
-    public String commentary;
+    private Commentary commentary;
 
     /** To preload the timer on the front app **/
     public Integer initialSecondRest = 60;

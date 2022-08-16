@@ -6,16 +6,30 @@ import lombok.*;
 @Getter
 @Setter
 @NoArgsConstructor
-public class ApplicableSet extends ASet {
-    private String commentary;
+@AllArgsConstructor
+@RequiredArgsConstructor
+public class ApplicableSet {
+    @NonNull
+    private Integer reps;
 
-    public ApplicableSet(Integer reps, Boolean bodyWeight, Double weight, Integer staticTime, Integer rpe, Integer rir, String commentary) {
-        super(reps, bodyWeight, weight, staticTime, rpe, rir);
-        this.commentary = commentary;
-    }
+    @NonNull
+    private ERepType repType;
 
-    public ApplicableSet(Integer order, Integer reps, Boolean bodyWeight, Double weight, Integer staticTime, Integer rpe, Integer rir, String commentary) {
-        super(order, reps, bodyWeight, weight, staticTime, rpe, rir);
-        this.commentary = commentary;
-    }
+    @NonNull
+    private Double value;
+
+    @NonNull
+    private EUnit unit;
+
+    @NonNull
+    private Boolean bodyWeight;
+
+    @NonNull
+    private Integer secondRest;
+
+    private Commentary commentary;
+
+    private Integer rpe;
+
+    private Integer rir;
 }

@@ -1,6 +1,6 @@
 package fr.cyclone.ehwaz.models;
 
-public enum Muscle {
+public enum EMuscle {
     CHEST,
     UPPER_CHEST,
     LOWER_CHES,
